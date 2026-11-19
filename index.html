@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#141323">
+  <title>기억을 수집하는 도서관</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-shell">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark">✦</span><div><p class="eyebrow">THE MEMORY ARCHIVE</p><h1>기억을 수집하는 도서관</h1></div></div>
+      <div class="stats"><span id="roomLabel">첫 번째 서가</span><span class="memory-count">기억 <b id="count">0 / 15</b></span><button class="sound-toggle" id="soundToggle" aria-label="효과음 끄기" title="효과음">♫</button></div>
+    </header>
+    <section class="game-frame" aria-label="게임 화면">
+      <canvas id="game" width="800" height="450" aria-label="도서관 탐험 게임"></canvas>
+      <div class="hint" id="hint">방향키 또는 WASD로 이동하세요</div>
+      <div class="overlay" id="overlay"><div class="overlay-card">
+        <div class="book-icon" id="bookIcon">▤</div><p class="eyebrow" id="overlayEyebrow">A LITTLE PIXEL ADVENTURE</p>
+        <h2 id="overlayTitle">기억을 수집하는<br>도서관</h2>
+        <p id="overlayText">오래된 도서관에 흩어진 기억 조각을 찾아<br>다섯 개의 방에 숨은 이야기를 완성해 주세요.</p>
+        <div class="choices" id="choices"></div>
+        <button id="startButton">모험 시작하기 <span>→</span></button>
+        <small id="overlayFoot">이동: 방향키 / WASD　·　조사: E　·　모바일: 화면 버튼</small>
+      </div></div>
+    </section>
+    <footer class="controls"><p><span class="key">W A S D</span> 또는 <span class="key">방향키</span> 이동 <span class="divider">·</span> <span class="key">E</span> 기억 조사 / 문 열기</p>
+      <div class="mobile-pad" aria-label="터치 이동 버튼"><button data-dir="up" aria-label="위로">▲</button><div><button data-dir="left" aria-label="왼쪽">◀</button><button data-dir="down" aria-label="아래로">▼</button><button data-dir="right" aria-label="오른쪽">▶</button></div></div>
+    </footer>
+  </main><script src="script.js"></script>
+</body>
+</html>
